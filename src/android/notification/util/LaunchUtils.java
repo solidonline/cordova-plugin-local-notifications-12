@@ -16,7 +16,7 @@ public final class LaunchUtils {
    private static int getIntentFlags() {
         int flags = PendingIntent.FLAG_UPDATE_CURRENT;
         if (android.os.Build.VERSION.SDK_INT >= 31) {
-			flags |= PendingIntent.FLAG_MUTABLE;
+			flags |= 1<<25;
         }
         return flags;
     }
